@@ -4,16 +4,16 @@ import pandas as pd
 
 app = Flask(__name__)
 
+df_station = pd.read_csv("data/stations.txt", skiprows=17)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    return render_template("home.html",
+                           data=df_station[["STAID", "STANAME                                 "]].to_html())
 
 
 @app.route("/api/v1/<station>/<date>")
-def about(station, date):
-
-    station_length = len(station)
+def api(station, date):
     path = f"data/TG_STAID{station.zfill(6)}.txt"
 
     df = pd.read_csv(path, skiprows=20, parse_dates=["    DATE"])
