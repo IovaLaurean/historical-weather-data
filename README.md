@@ -25,7 +25,7 @@ This Python application provides historical weather data from various stations a
 
 1. Clone this repository to your local machine:
    ```
-   git clone https://github.com/mahdi-meyghani/Historical-Weather-Data-API.git
+   git clone https://github.com/Mahdi-Meyghani/Historical-Weather-Data-API.git
    ```
 
 2. Install the required dependencies using the `requirements.txt` file:
